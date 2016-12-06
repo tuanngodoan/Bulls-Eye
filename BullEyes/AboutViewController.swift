@@ -10,10 +10,21 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    @IBOutlet weak var webView:UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let htmlFile = Bundle.main.path(forResource: "BullsEye", ofType: ".html"){
+            
+            if let htmlData  = NSData(contentsOfFile: htmlFile)
+            {
+                let baseURL = NSURL(fileURLWithPath: Bundle.main.bundlePath)
+                
+                webView.load( htmlData as Data, mimeType: "text/html", textEncodingName: "UTF - 8", baseURL: baseURL as URL)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +32,9 @@ class AboutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
