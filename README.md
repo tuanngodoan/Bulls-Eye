@@ -1,9 +1,22 @@
-### Simple First Game Bull's Eye
+### Game đoán số đơn giản - Bull eye
+Mô phỏng lại game đoán số đơn giản.
 
-★ Bull's Eye ★
+![](bull_demo.png)
 
-This is the awesome game of Bull's Eye where you can win points and earn fame by dragging a slider.
+## Nền tảng
 
-Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score.
+IOS > 10.2
 
-Enjoy!
+## Ngôn ngữ, công cụ
+
+* Swift 3.0 
+* Xcode 8
+
+### Kĩ thuật
+
+* Thư viện AVFoundation/AVAudioPlayer
+
+* Giải thuật cơ bản: Random
+
+### Tham khảo
+* [Raywenderlich](https://www.raywenderlich.com/category/ios)
